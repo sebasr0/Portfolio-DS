@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed project information - Portfolio">
+    <title>Project Detail | Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/project-detail.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" data-navbar>
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo">
+                <svg class="logo" viewBox="0 0 100 100" width="40" height="40">
+                    <rect width="100" height="100" fill="var(--color-accent)"/>
+                </svg>
+            </a>
+            <a href="index.html" class="btn btn--secondary">Back to Projects</a>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-detail__header">
+                <h1 class="project-detail__title" id="projectTitle">Loading...</h1>
+                <div class="project-detail__meta">
+                    <div class="project-detail__category" id="projectCategory"></div>
+                    <div class="project-detail__tags" id="projectTags"></div>
+                </div>
+            </div>
+
+            <div class="project-detail__content">
+                <div class="project-detail__gallery" id="projectGallery">
+                    <img src="" alt="" id="projectImage" class="project-detail__main-image">
+                </div>
+
+                <div class="project-detail__info">
+                    <div class="project-detail__section">
+                        <h2>Project Overview</h2>
+                        <p id="projectDescription">Loading...</p>
+                    </div>
+
+                    <div class="project-detail__section">
+                        <h2>Technical Details</h2>
+                        <div class="project-detail__tech" id="projectTech">
+                            <h3>Technologies Used:</h3>
+                            <ul id="techList"></ul>
+                        </div>
+                    </div>
+
+                    <div class="project-detail__section">
+                        <h2>Key Features</h2>
+                        <ul class="feature-list" id="featureList"></ul>
+                    </div>
+
+                    <div class="project-detail__section">
+                        <h2>Results & Impact</h2>
+                        <div class="metrics-grid" id="metricsGrid"></div>
+                    </div>
+
+                    <div class="project-detail__actions">
+                        <a href="#" class="btn btn--primary" id="liveDemo" target="_blank">View Live Demo</a>
+                        <a href="#" class="btn btn--secondary" id="sourceCode" target="_blank">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social">
+                <a href="https://github.com/sebasr0" class="social-link" aria-label="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p class="footer__copyright">&copy; <span id="year">2025</span> Made With ❤️ by <a href="https://github.com/sebasr0" target="_blank" rel="noopener">Sebastian Ramirez</a>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/project-detail.js" type="module"></script>
+</body>
+</html>

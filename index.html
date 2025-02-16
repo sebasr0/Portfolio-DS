@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Showcasing my work and skills in data science">
+    <title>Portfolio | Home</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="css/components/cards.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/components/forms.css" media="print" onload="this.media='all'">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "url": "https://yourportfolio.com",
+        "jobTitle": "Web Developer",
+        "sameAs": [
+            "https://github.com/yourusername",
+            "https://linkedin.com/in/yourusername"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" data-navbar>
+        <div class="container navbar__container">
+            <a href="#" class="navbar__logo">
+                <svg class="logo" viewBox="0 0 100 100" width="40" height="40">
+                    <!-- Logo SVG will be added -->
+                    <rect width="100" height="100" fill="var(--color-accent)"/>
+                </svg>
+            </a>
+            <button class="navbar__toggle" aria-label="Toggle menu" data-nav-toggle>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="navbar__menu">
+                <ul class="navbar__list">
+                    <li><a href="#home" class="navbar__link active">Home</a></li>
+                    <li><a href="#projects" class="navbar__link">Projects</a></li>
+                    <li><a href="#skills" class="navbar__link">Skills</a></li>
+                    <li><a href="#contact" class="navbar__link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title" data-typewriter>
+                    Data Scientist
+                </h1>
+                <div class="hero__description">
+                    <p>Apasionado científico de datos con experiencia en machine learning, análisis estadístico y visualización de datos. Especializado en:</p>
+                    <ul class="hero__specialties">
+                        <li>Desarrollo de modelos predictivos y sistemas de recomendación</li>
+                        <li>Análisis de datos a gran escala y optimización de procesos</li>
+                        <li>Implementación de soluciones de IA en entornos productivos</li>
+                        <li>Automatización y mejora continua de flujos de datos</li>
+                    </ul>
+                    <p class="hero__highlight">Transformando datos en soluciones impactantes y decisiones basadas en evidencia.</p>
+                </div>
+                <div class="hero__cta">
+                    <a href="#projects" class="btn btn--primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn--secondary">Contactar</a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="hero__profile">
+                    <img src="assets/profile.webp" alt="Sebastian Ramirez - Data Scientist" class="hero__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section__title">Featured Projects</h2>
+            <div class="projects__filters" data-filters>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
+                <button class="filter-btn" data-filter="big-data">Big Data</button>
+            </div>
+            <div class="projects__grid" data-projects-grid></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section__title">Technical Skills</h2>
+            <div class="skills__grid">
+                <div class="skill-card" data-animate>
+                    <h3>Machine Learning</h3>
+                    <div class="skill-progress">
+                        <div class="progress" data-progress="90"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>XGBoost</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-animate>
+                    <h3>Data Analysis</h3>
+                    <div class="skill-progress">
+                        <div class="progress" data-progress="95"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>SQL</li>
+                        <li>Power BI</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-animate>
+                    <h3>Statistics</h3>
+                    <div class="skill-progress">
+                        <div class="progress" data-progress="85"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Hypothesis Testing</li>
+                        <li>A/B Testing</li>
+                        <li>Regression Analysis</li>
+                        <li>Time Series</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card" data-animate>
+                    <h3>Big Data</h3>
+                    <div class="skill-progress">
+                        <div class="progress" data-progress="80"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Spark</li>
+                        <li>Hadoop</li>
+                        <li>AWS</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section__title">Get in Touch</h2>
+            <form class="contact__form" id="contactForm" data-contact-form>
+                <div class="form__group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form__group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form__group">
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn btn--primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social">
+                <a href="#" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p class="footer__copyright">&copy; <span id="year">2025</span> Made With LLM's and ❤️ by <a href="https://github.com/sebasr0" target="_blank" rel="noopener">Sebastian Ramirez</a>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js" type="module"></script>
+    <script src="js/animations.js" type="module"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
+</body>
+</html>
