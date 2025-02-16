@@ -40,10 +40,12 @@
     <nav class="navbar" data-navbar>
         <div class="container navbar__container">
             <a href="#" class="navbar__logo">
-                <svg class="logo" viewBox="0 0 100 100" width="40" height="40">
-                    <!-- Logo SVG will be added -->
-                    <rect width="100" height="100" fill="var(--color-accent)"/>
+                <svg class="logo" viewBox="0 0 50 50" width="40" height="40">
+                    <path class="logo-path" d="M25 5 L45 35 L25 45 L5 35 L25 5Z" fill="none" stroke="var(--color-accent)" stroke-width="2"/>
+                    <path class="logo-inner" d="M25 15 L35 30 L25 " fill="var(--color-accent)"/>
+                    <circle class="logo-dot" cx="25" cy="25" r="2" fill="var(--color-secondary)"/>
                 </svg>
+                <span class="logo-text">Sebastian<span class="accent">Dev</span></span>
             </a>
             <button class="navbar__toggle" aria-label="Toggle menu" data-nav-toggle>
                 <span class="hamburger"></span>
@@ -96,11 +98,11 @@
         <div class="container">
             <h2 class="section__title">Featured Projects</h2>
             <div class="projects__filters" data-filters>
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
-                <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
-                <button class="filter-btn" data-filter="analytics">Analytics</button>
-                <button class="filter-btn" data-filter="big-data">Big Data</button>
+                <button class="filter-btn active" data-filter="all"><span>All</span></button>
+                <button class="filter-btn" data-filter="machine-learning"><span>Machine Learning</span></button>
+                <button class="filter-btn" data-filter="deep-learning"><span>Deep Learning</span></button>
+                <button class="filter-btn" data-filter="analytics"><span>Analytics</span></button>
+                <button class="filter-btn" data-filter="big-data"><span>Big Data</span></button>
             </div>
             <div class="projects__grid" data-projects-grid></div>
         </div>
@@ -202,7 +204,7 @@
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
-            <p class="footer__copyright">&copy; <span id="year">2025</span> Made With LLM's and ❤️ by <a href="https://github.com/sebasr0" target="_blank" rel="noopener">Sebastian Ramirez</a>. All rights reserved.</p>
+            <p class="footer__copyright">&copy; <span id="year">2025</span> Made With LLM's and ❤️ by <a href="https://github.com/sebasr0" target="_blank" rel="noopener">Sebastian Ramirez</a></p>
         </div>
     </footer>
 
