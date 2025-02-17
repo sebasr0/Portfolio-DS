@@ -14,8 +14,8 @@ const projects = [
         title: 'Telegram Woocommerce Chatbot',
         description: 'Developed a machine learning model to predict customer churn with 92% accuracy using XGBoost and feature engineering techniques.',
         image: 'assets/telegram.webp',
-        category: 'machine-learning',
-        technologies: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
+        category: 'llm',
+        technologies: ['Python', 'Telegram API', 'LLM Sales Agent', 'OpenAI API', 'WooCommerce API'],
         link: 'https://github.com/yourusername/telegram-chatbot' // Ejemplo de proyecto con demo
     },
     {
