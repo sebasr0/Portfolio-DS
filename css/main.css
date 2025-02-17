@@ -580,3 +580,213 @@
 .footer__copyright {
     opacity: 0.7;
 }
+
+/* Education Section */
+.education {
+    padding: var(--space-xl) 0;
+    background: var(--gradient-primary);
+}
+
+.education__timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-lg) 0;
+}
+
+.education__timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--color-accent),
+        transparent
+    );
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(0, 199, 255, 0.3);
+    z-index: 1;
+}
+
+.timeline-content {
+    width: 45%;
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    margin-left: auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    background: rgba(0, 199, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+}
+
+.timeline-content h3 {
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+    font-size: 1.2rem;
+}
+
+.timeline-institution {
+    color: var(--color-secondary);
+    opacity: 0.8;
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+}
+
+.timeline-description {
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+    color: var(--color-secondary);
+    opacity: 0.9;
+}
+
+.timeline-achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.achievement {
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    color: var(--color-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Education Timeline Animations */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-marker {
+    transform: scale(0) translateX(-50%);
+    transition: transform 0.4s ease 0.2s;
+}
+
+.timeline-item.animated .timeline-marker {
+    transform: scale(1) translateX(-50%);
+}
+
+.timeline-content {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s ease 0.3s;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    transform: translateX(-50px);
+}
+
+.timeline-item.animated .timeline-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-achievements .achievement {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.timeline-item.animated .achievement {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item.animated .achievement:nth-child(1) { transition-delay: 0.6s; }
+.timeline-item.animated .achievement:nth-child(2) { transition-delay: 0.7s; }
+.timeline-item.animated .achievement:nth-child(3) { transition-delay: 0.8s; }
+
+@media (max-width: 768px) {
+    .education__timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-marker {
+        left: 30px;
+        transform: translateX(-50%);
+    }
+    
+    .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 60px;
+        margin-right: 0;
+    }
+    
+    .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        transform: translateX(30px);
+    }
+    
+    .timeline-item.animated .timeline-content {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        transform: translateX(30px);
+    }
+    
+    .timeline-item.animated .timeline-content {
+        transform: translateX(0);
+    }
+}

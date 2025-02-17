@@ -16,7 +16,7 @@ const projects = [
         image: 'assets/churn-prediction.webp',
         category: 'machine-learning',
         technologies: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
-        link: '#'
+        link: 'https://github.com/yourusername/telegram-chatbot' // Ejemplo de proyecto con demo
     },
     {
         id: 'time-series',
@@ -25,7 +25,7 @@ const projects = [
         image: 'assets/time-series.webp',
         category: 'analytics',
         technologies: ['Python', 'Prophet', 'Streamlit', 'Plotly'],
-        link: '#'
+        link: '#' // Proyecto sin demo
     },
     {
         id: 'nlp-sentiment',
@@ -34,7 +34,7 @@ const projects = [
         image: 'assets/nlp-sentiment.webp',
         category: 'deep-learning',
         technologies: ['PyTorch', 'BERT', 'Transformers', 'Flask'],
-        link: '#'
+        link: '#' // Proyecto sin demo
     },
     {
         id: 'image-classification',
@@ -43,7 +43,7 @@ const projects = [
         image: 'assets/image-classification.webp',
         category: 'deep-learning',
         technologies: ['TensorFlow', 'AWS', 'Docker', 'REST API'],
-        link: '#'
+        link: '#' // Proyecto sin demo
     },
     {
         id: 'ab-testing',
@@ -52,7 +52,7 @@ const projects = [
         image: 'assets/ab-testing.webp',
         category: 'analytics',
         technologies: ['Python', 'Statistics', 'SQL', 'Airflow'],
-        link: '#'
+        link: '#' // Proyecto sin demo
     },
     {
         id: 'big-data',
@@ -61,7 +61,7 @@ const projects = [
         image: 'assets/big-data.webp',
         category: 'big-data',
         technologies: ['Spark', 'Kafka', 'AWS EMR', 'Python'],
-        link: '#'
+        link: '#' // Proyecto sin demo
     }
 ];
 
@@ -140,7 +140,7 @@ function initProjects() {
                     </div>
                     <div class="project-card__actions">
                         <a href="project-detail.html?id=${project.id}" class="btn btn--primary">View Details</a>
-                        ${project.link ? `<a href="${project.link}" class="btn btn--secondary" target="_blank">Live Demo</a>` : ''}
+                        ${project.link && project.link !== '#' ? `<a href="${project.link}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>` : ''}
                     </div>
                 </div>
             </article>

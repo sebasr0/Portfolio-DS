@@ -96,6 +96,34 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Timeline animation enhancement
+function initTimelineAnimations() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                
+                // Animate the vertical timeline line
+                const timeline = entry.target.closest('.education__timeline');
+                if (timeline) {
+                    timeline.classList.add('timeline-visible');
+                }
+                
+                timelineObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px'
+    });
+    
+    timelineItems.forEach(item => {
+        timelineObserver.observe(item);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Scroll animations
     const scrollElements = document.querySelectorAll('[data-scroll]');
@@ -125,4 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize scroll animations
     handleScrollAnimation();
+    
+    // Initialize all animations
+    initTimelineAnimations();
+    initSkillBars();
 });
