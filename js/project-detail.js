@@ -4,7 +4,7 @@ const projectsData = {
         title: 'Telegram Woocommerce Chatbot',
         category: 'machine-learning',
         description: `A sophisticated chatbot that integrates Telegram with WooCommerce, providing automated customer service and order management capabilities. The system uses natural language processing to understand customer queries and machine learning to improve responses over time.`,
-        image: 'assets/churn-prediction.webp',
+        image: 'assets/telegram.webp',
         technologies: ['Python', 'TensorFlow', 'Natural Language Processing', 'Telegram API', 'WooCommerce API'],
         features: [
             'Natural language understanding for processing customer queries',
