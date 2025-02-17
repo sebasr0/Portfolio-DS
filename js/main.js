@@ -19,10 +19,10 @@ const projects = [
         link: 'https://github.com/yourusername/telegram-chatbot' // Ejemplo de proyecto con demo
     },
     {
-        id: 'time-series',
-        title: 'Time Series Forecasting Dashboard',
-        description: 'Created an interactive dashboard for sales forecasting using Prophet and Streamlit, reducing forecast error by 35%.',
-        image: 'assets/time-series.webp',
+        id: 'bank-complaints',
+        title: 'Bank Complaints Analysis with NLP and Spark',
+        description: 'Analyzed bank customer complaints to identify trends and patterns, using natural language processing and big data techniques.',
+        image: 'assets/bank-complaints.webp',
         category: 'analytics',
         technologies: ['Python', 'Prophet', 'Streamlit', 'Plotly'],
         link: '#' // Proyecto sin demo

@@ -34,11 +34,11 @@ const projectsData = {
         demoUrl: 'https://demo-url.com',
         sourceUrl: 'https://github.com/sebasr0/telegram-chatbot'
     },
-    'time-series': {
-        title: 'Time Series Forecasting Dashboard',
+    'bank-complaints': {
+        title: 'Bank Complaints',
         category: 'analytics',
         description: `An advanced time series forecasting system that combines multiple statistical and machine learning models to provide accurate sales predictions. The interactive dashboard allows users to visualize trends, seasonality, and anomalies in the data.`,
-        image: 'assets/time-series.webp',
+        image: 'assets/bank-complaints.webp',
         technologies: ['Python', 'Prophet', 'Streamlit', 'Plotly', 'Pandas', 'scikit-learn'],
         features: [
             'Multi-model ensemble forecasting',
