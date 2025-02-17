@@ -12,11 +12,11 @@ const projects = [
     {
         id: 'telegram-chatbot',
         title: 'Telegram Woocommerce Chatbot',
-        description: 'Developed a machine learning model to predict customer churn with 92% accuracy using XGBoost and feature engineering techniques.',
+        description: 'Developed a chatbot that integrates Telegram with WooCommerce and MongoDB, providing automated customer service.',
         image: 'assets/telegram.webp',
         category: 'llm',
-        technologies: ['Python', 'Flask', 'Telegram API', 'LLM Sales Agent', 'OpenAI API', 'WooCommerce API'],
-        link: 'https://github.com/yourusername/telegram-chatbot' // Ejemplo de proyecto con demo
+        technologies: ['Python', 'Flask', 'Telegram API', 'LLM Sales Agent', 'OpenAI API', 'WooCommerce API', 'MongoDB'],
+        link: 'https://github.com/sebasr0/telegram-chatbot' // Ejemplo de proyecto con demo
     },
     {
         id: 'bank-complaints',
