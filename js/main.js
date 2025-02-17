@@ -15,7 +15,7 @@ const projects = [
         description: 'Developed a machine learning model to predict customer churn with 92% accuracy using XGBoost and feature engineering techniques.',
         image: 'assets/telegram.webp',
         category: 'llm',
-        technologies: ['Python', 'Telegram API', 'LLM Sales Agent', 'OpenAI API', 'WooCommerce API'],
+        technologies: ['Python', 'Flask', 'Telegram API', 'LLM Sales Agent', 'OpenAI API', 'WooCommerce API'],
         link: 'https://github.com/yourusername/telegram-chatbot' // Ejemplo de proyecto con demo
     },
     {
@@ -23,17 +23,17 @@ const projects = [
         title: 'Bank Complaints Analysis with NLP and Spark',
         description: 'Analyzed bank customer complaints to identify trends and patterns, using natural language processing and big data techniques.',
         image: 'assets/bank-complaints.webp',
-        category: 'analytics',
-        technologies: ['Python', 'Prophet', 'Streamlit', 'Plotly'],
+        category: 'nlp',
+        technologies: ['Python', 'PySpark', 'Streamlit', 'Docker', 'AWS', 'Spark-NLP', 'JhonSnowLabs'],
         link: '#' // Proyecto sin demo
     },
     {
-        id: 'nlp-sentiment',
-        title: 'NLP Sentiment Analysis',
-        description: 'Built a deep learning model for real-time sentiment analysis of customer feedback using BERT and achieving 88% F1-score.',
-        image: 'assets/nlp-sentiment.webp',
-        category: 'deep-learning',
-        technologies: ['PyTorch', 'BERT', 'Transformers', 'Flask'],
+        id: 'tdg-forex',
+        title: 'Implementation ofMachine Learning Models for Trend Prediction in Forex Currency Pairs',
+        description: 'Grade Project for Masters Degree in Data Science',
+        image: 'assets/forex.webp',
+        category: 'machine-learning',
+        technologies: ['Python', 'XGBoost', 'Scikit-Learn', 'CatBoost', 'Feature Engineering', 'Time Series Analysis'],
         link: '#' // Proyecto sin demo
     },
     {
@@ -173,49 +173,8 @@ function initProjects() {
     renderProjects();
 }
 
-// Contact Form
-function initContactForm() {
-    if (!contactForm) return;
-
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        try {
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Get reCAPTCHA token
-            const token = await grecaptcha.execute('YOUR_SITE_KEY', {action: 'submit'});
-            
-            // Add token to data
-            data.token = token;
-            
-            // Send form data
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-            
-            if (response.ok) {
-                alert('Message sent successfully!');
-                contactForm.reset();
-            } else {
-                throw new Error('Failed to send message');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Failed to send message. Please try again.');
-        }
-    });
-}
-
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initProjects();
-    initContactForm();
 });
