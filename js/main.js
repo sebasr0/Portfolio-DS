@@ -7,7 +7,7 @@ const filterButtons = document.querySelector('[data-filters]');
 const contactForm = document.querySelector('[data-contact-form]');
 const navMenu = document.querySelector('.navbar__menu');
 
-// Projects Data - using URL-friendly IDs
+// Projects Data
 const projects = [
     {
         id: 'telegram-chatbot',
@@ -21,7 +21,7 @@ const projects = [
     {
         id: 'bank-complaints',
         title: 'Bank Complaints Analysis with NLP and Spark',
-        description: 'Analyzed bank customer complaints to identify trends and patterns, using natural language processing and big data techniques.',
+        description: 'Analyzed bank customer complaints to identify trends and patterns, using natural language processing and big data techniques using AWS EMRStudio and Spark-NLP library.',
         image: 'assets/bank-complaints.webp',
         category: 'nlp',
         technologies: ['Python', 'PySpark', 'Streamlit', 'Docker', 'AWS', 'Spark-NLP', 'JhonSnowLabs'],
@@ -29,7 +29,7 @@ const projects = [
     },
     {
         id: 'tdg-forex',
-        title: 'Implementation ofMachine Learning Models for Trend Prediction in Forex Currency Pairs',
+        title: 'Implementation of Machine Learning Models for Trend Prediction in Forex Currency Pairs',
         description: 'Grade Project for Masters Degree in Data Science',
         image: 'assets/forex.webp',
         category: 'machine-learning',
@@ -39,28 +39,10 @@ const projects = [
     {
         id: 'image-classification',
         title: 'Image Classification System',
-        description: 'Implemented a CNN-based image classification system for product categorization, deployed on AWS with auto-scaling.',
+        description: 'Developed an streamlit application for image classification using a pre-trained model from HuggingFace.',
         image: 'assets/image-classification.webp',
         category: 'deep-learning',
-        technologies: ['TensorFlow', 'AWS', 'Docker', 'REST API'],
-        link: '#' // Proyecto sin demo
-    },
-    {
-        id: 'ab-testing',
-        title: 'A/B Testing Framework',
-        description: 'Developed an automated A/B testing framework that increased experiment velocity by 200% and improved decision-making accuracy.',
-        image: 'assets/ab-testing.webp',
-        category: 'analytics',
-        technologies: ['Python', 'Statistics', 'SQL', 'Airflow'],
-        link: '#' // Proyecto sin demo
-    },
-    {
-        id: 'big-data',
-        title: 'Big Data Pipeline',
-        description: 'Architected and implemented a real-time data processing pipeline handling 1TB+ daily data using Apache Spark.',
-        image: 'assets/big-data.webp',
-        category: 'big-data',
-        technologies: ['Spark', 'Kafka', 'AWS EMR', 'Python'],
+        technologies: ['Python', 'Streamlit', 'HuggingFace', 'Docker', 'REST API'],
         link: '#' // Proyecto sin demo
     }
 ];
