@@ -3,15 +3,19 @@ const projectsData = {
     'telegram-chatbot': {
         title: 'Telegram Woocommerce Chatbot',
         category: 'llm',
-        description: `A sophisticated chatbot that integrates Telegram with WooCommerce, providing automated customer service and order management capabilities. The system uses natural language processing to understand customer queries and machine learning to improve responses over time.`,
+        description: `A chatbot with Retrieval Augmented Generation (RAG) that integrates Telegram with WooCommerce, providing automated customer service and order management capabilities. The system uses natural language processing to understand customer queries and machine learning to improve responses over time.
+        
+        The chatbot is built with Python and Flask, and uses the OpenAI API for creating embeddings and generating responses. It is connected to a MongoDB database for storing customer information and order and chat history, and is also integrated with the Groq API with llama.
+        
+        The chatbot is available in multiple languages and can automatically detect the user's language, making it easy for customers to get the help they need in their preferred language.`,
+
         image: 'assets/telegram.webp',
         technologies: ['Python', 'Flask', 'LLM', 'Telegram API', 'WooCommerce API', 'MongoDB', 'Groq API', 'OpenAI API', 'RAG'],
         features: [
             'Natural language understanding for processing customer queries',
-            'Automated order status tracking and updates',
             'Product catalog browsing and search',
-            'Smart product recommendations based on user interaction',
-            'Multi-language support with automatic language detection'
+            'Multi-language support with automatic language detection',
+            'Automated stock updates for the customer'
         ],
         metrics: [
             {
