@@ -16,7 +16,7 @@ const projects = [
         image: 'assets/telegram.webp',
         category: 'llm',
         technologies: ['Python', 'Flask', 'Telegram API', 'LLM Sales Agent', 'OpenAI API', 'WooCommerce API', 'MongoDB'],
-        link: 'https://github.com/sebasr0/telegram-chatbot' // Ejemplo de proyecto con demo
+        link: 'https://github.com/sebasr0/telegram-chatbot' 
     },
     {
         id: 'bank-complaints',
@@ -25,7 +25,7 @@ const projects = [
         image: 'assets/bank-complaints.webp',
         category: 'nlp',
         technologies: ['Python', 'PySpark', 'Streamlit', 'Docker', 'AWS', 'Spark-NLP', 'JhonSnowLabs'],
-        link: '#' // Proyecto sin demo
+        link: '#' 
     },
     {
         id: 'tdg-forex',
@@ -34,17 +34,8 @@ const projects = [
         image: 'assets/forex.webp',
         category: 'machine-learning',
         technologies: ['Python', 'XGBoost', 'Scikit-Learn', 'CatBoost', 'Feature Engineering', 'Time Series Analysis'],
-        link: '#' // Proyecto sin demo
+        link: '#' 
     },
-    {
-        id: 'image-classification',
-        title: 'Image Classification System',
-        description: 'Developed an streamlit application for image classification using a pre-trained model from HuggingFace.',
-        image: 'assets/image-classification.webp',
-        category: 'deep-learning',
-        technologies: ['Python', 'Streamlit', 'HuggingFace', 'Docker', 'REST API'],
-        link: '#' // Proyecto sin demo
-    }
 ];
 
 // Navigation
@@ -53,7 +44,7 @@ function initNavigation() {
     let lastScroll = 0;
     
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
+        const currentScroll = window.scrollY;
         
         // Add/remove scrolled class
         if (currentScroll > 50) {
@@ -62,8 +53,42 @@ function initNavigation() {
             navbar.classList.remove('scrolled');
         }
         
+        // Update active link based on scroll position
+        updateActiveNavLink();
+        
         lastScroll = currentScroll;
     });
+
+    // Function to update the active nav link based on scroll position
+    function updateActiveNavLink() {
+        // Get all sections that have an ID corresponding to a nav link
+        const sections = document.querySelectorAll('section[id]');
+        
+        // Find which section is currently in view
+        let currentSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100; // 100px offset for navbar height
+            const sectionHeight = section.offsetHeight;
+            const currentScroll = window.scrollY;
+            
+            if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+                currentSectionId = '#' + section.getAttribute('id');
+            }
+        });
+        
+        // If we're at the top of the page and no section is active, set home as active
+        if (currentSectionId === '' && window.scrollY < 100) {
+            currentSectionId = '#home';
+        }
+        
+        // Update the active class on nav links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === currentSectionId) {
+                link.classList.add('active');
+            }
+        });
+    }
 
     // Mobile menu toggle
     if (navToggle) {
@@ -99,6 +124,9 @@ function initNavigation() {
             }
         });
     });
+    
+    // Initial active link update
+    updateActiveNavLink();
 }
 
 // Projects
