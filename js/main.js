@@ -16,7 +16,7 @@ const projects = [
         image: 'assets/telegram.webp',
         category: 'llm',
         technologies: ['Python', 'Flask', 'Telegram API', 'LLM Sales Agent', 'OpenAI API', 'WooCommerce API', 'MongoDB'],
-        link: 'https://github.com/sebasr0/telegram-chatbot' 
+        link: '#' 
     },
     {
         id: 'bank-complaints',

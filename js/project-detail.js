@@ -29,14 +29,9 @@ const projectsData = {
             {
                 value: '3.5s',
                 label: 'Average Response Time'
-            },
-            {
-                value: '40%',
-                label: 'Support Cost Reduction'
             }
         ],
-        demoUrl: 'https://demo-url.com',
-        sourceUrl: 'https://github.com/sebasr0/telegram-chatbot'
+        sourceUrl: 'https://github.com/sebasr0/TelegramBot'
     },
     'bank-complaints': {
         title: 'Bank Complaints',
