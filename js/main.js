@@ -66,19 +66,29 @@ function initNavigation() {
         
         // Find which section is currently in view
         let currentSectionId = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100; // 100px offset for navbar height
-            const sectionHeight = section.offsetHeight;
-            const currentScroll = window.scrollY;
-            
-            if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
-                currentSectionId = '#' + section.getAttribute('id');
-            }
-        });
         
-        // If we're at the top of the page and no section is active, set home as active
-        if (currentSectionId === '' && window.scrollY < 100) {
-            currentSectionId = '#home';
+        // Check if we're at the bottom of the page - if so, activate the last section
+        const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
+        
+        if (isAtBottom) {
+            // If at bottom, set the contact section as active
+            currentSectionId = '#contact';
+        } else {
+            // Otherwise check which section is in view
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100; // 100px offset for navbar height
+                const sectionHeight = section.offsetHeight;
+                const currentScroll = window.scrollY;
+                
+                if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+                    currentSectionId = '#' + section.getAttribute('id');
+                }
+            });
+            
+            // If we're at the top of the page and no section is active, set home as active
+            if (currentSectionId === '' && window.scrollY < 100) {
+                currentSectionId = '#home';
+            }
         }
         
         // Update the active class on nav links
