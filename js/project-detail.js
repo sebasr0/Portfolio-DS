@@ -34,38 +34,42 @@ const projectsData = {
         sourceUrl: 'https://github.com/sebasr0/TelegramBot'
     },
     'bank-complaints': {
-        title: 'Bank Complaints',
+        title: 'Bank Complaints Text Processing with Spark NLP',
         category: 'analytics',
-        description: `An advanced time series forecasting system that combines multiple statistical and machine learning models to provide accurate sales predictions. The interactive dashboard allows users to visualize trends, seasonality, and anomalies in the data.`,
+        description: `A comprehensive text processing and analysis project that utilizes Spark NLP to analyze bank complaints data. The project implements various natural language processing techniques to extract insights, categorize complaints, and predict complaint categories.
+        
+        The application is containerized using Docker and features a Streamlit interface for interactive analysis. It incorporates sophisticated machine learning models including CountVectorizer, IDF, LDA for topic modeling, and supervised classification models like Logistic Regression and Decision Trees.
+        
+        The project is structured with a modular architecture that separates the application layer, configuration, and analytics components. MlFlow is utilized for experiment tracking and model versioning, ensuring reproducibility and performance monitoring.`,
         image: 'assets/bank-complaints.webp',
-        technologies: ['Python', 'Prophet', 'Streamlit', 'Plotly', 'Pandas', 'scikit-learn'],
+        technologies: ['Spark NLP', 'Python', 'Streamlit', 'Docker', 'MlFlow', 'Logistic Regression', 'LDA', 'CountVectorizer', 'IDF', 'Decision Tree', 'Jupyter Notebook'],
         features: [
-            'Multi-model ensemble forecasting',
-            'Interactive data visualization',
-            'Automated seasonality detection',
-            'Anomaly detection and alerting',
-            'Export capabilities for reports'
+            'Text processing pipeline with Spark NLP',
+            'Topic modeling to categorize complaints (LDA)',
+            'Supervised classification with Logistic Regression and Decision Trees',
+            'Interactive Streamlit dashboard for analysis',
+            'Containerized deployment with Docker',
+            'Model tracking and versioning with MlFlow'
         ],
         metrics: [
             {
-                value: '35%',
-                label: 'Forecast Error Reduction'
+                value: '79.9%',
+                label: 'Logistic Regression Accuracy'
             },
             {
-                value: '95%',
-                label: 'Prediction Accuracy'
+                value: '79.9%',
+                label: 'F1 Score'
             },
             {
-                value: '60%',
-                label: 'Time Saved in Analysis'
+                value: '5',
+                label: 'Identified Topic Categories'
             },
             {
-                value: '100+',
-                label: 'Active Users'
+                value: '53.9%',
+                label: 'Decision Tree Accuracy'
             }
         ],
-        demoUrl: 'https://demo-forecasting.com',
-        sourceUrl: 'https://github.com/sebasr0/time-series'
+        sourceUrl: 'https://github.com/sebasr0/SparkNLP-Project-Bank-Complaints'
     }
     // Add more detailed project data as needed
 };
