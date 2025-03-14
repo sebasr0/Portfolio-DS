@@ -70,8 +70,18 @@ const projectsData = {
             }
         ],
         sourceUrl: 'https://github.com/sebasr0/SparkNLP-Project-Bank-Complaints'
+    },
+    
+    'tdg-forex': {
+        title: 'Paper coming soon...',
+        category: 'Machine Learning',
+        description: `.`,
+        image: '#',
+        technologies: '#',
+        features: '#',
+        metrics: '#',
+        sourceUrl: '#'
     }
-    // Add more detailed project data as needed
 };
 
 // Get project ID from URL

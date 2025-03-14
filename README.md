@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, responsive portfolio website showcasing projects and skills, for data scientists, machine learning engineers, and data analysts.
+A modern, responsive portfolio website showcasing projects and skills, for data scientists, machine learning engineers, data analysts, or any professionals interested in showcasing their work to potential employers or clients.
 
 ![Portfolio Preview](assets/portfolio-preview.webp)
 
