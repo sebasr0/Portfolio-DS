@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, responsive portfolio website showcasing projects and skills with an elegant, minimalist design.
+A modern, responsive portfolio website showcasing projects and skills, for data scientists, machine learning engineers, and data analysts.
 
 ![Portfolio Preview](assets/portfolio-preview.webp)
 
@@ -82,9 +82,6 @@ portfolio-ws/
      ```
      # Using Python
      python -m http.server
-     
-     # Using Node.js
-     npx serve
      ```
 
 3. **Deployment**:
@@ -167,15 +164,8 @@ To add a new project to the portfolio, follow these steps:
    ```
 
 2. **Typography**: Font families and sizes are also defined as CSS variables
+
 3. **Spacing**: Spacing variables ensure consistent layout throughout the site
-
-## Browser Compatibility
-
-The portfolio is optimized for modern browsers including:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
 
 ## License
 
