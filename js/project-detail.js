@@ -71,8 +71,8 @@ const projectsData = {
         ],
         sourceUrl: 'https://github.com/sebasr0/SparkNLP-Project-Bank-Complaints'
     },
-    
-    'tdg-forex': {
+
+    'tdg-forex1': {
         title: 'Paper coming soon...',
         category: 'Machine Learning',
         description: `.`,
