@@ -1,284 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Portfolio - Showcasing my work and skills in data science">
-    <title>Portfolio | Home</title>
-    
-    <!-- Preload critical assets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components/nav.css">
-    
-    <!-- Deferred CSS -->
-    <link rel="stylesheet" href="css/components/cards.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/components/forms.css" media="print" onload="this.media='all'">
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Sebastian Ramirez",
-        "url": "#home",
-        "jobTitle": "Data Scientist",
-        "sameAs": [
-            "https://github.com/sebasr0",
-            "https://linkedin.com/in/sre-0"
-        ]
-    }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastian Ramirez — Data Scientist</title>
+  <meta name="description" content="Data science portfolio of Sebastian Ramirez: machine learning for market trends, large-scale NLP on Spark, and LLM agents in production.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f7f9fa'/%3E%3Cpath d='M4 8 Q10 26 16 20 T28 24' fill='none' stroke='%231d6feb' stroke-width='2.5'/%3E%3Ccircle cx='28' cy='24' r='3' fill='%23c9552e'/%3E%3C/svg%3E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sebastian Ramirez — Data Scientist">
+  <meta property="og:description" content="Machine learning for market trends, large-scale NLP on Spark, and LLM agents in production.">
+  <meta property="og:image" content="assets/portfolio-preview.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sebastian Ramirez",
+    "jobTitle": "Data Scientist",
+    "url": "https://sebasr0.github.io/Portfolio-DS/",
+    "sameAs": ["https://github.com/sebasr0", "https://linkedin.com/in/sre-0"]
+  }
+  </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" data-navbar>
-        <div class="container navbar__container">
-            <a href="#" class="navbar__logo">
-                <svg class="logo" viewBox="0 0 50 50" width="40" height="40">
-                    <path class="logo-path" d="M25 5 L45 35 L25 45 L5 35 L25 5Z" fill="none" stroke="var(--color-accent)" stroke-width="2"/>
-                    <path class="logo-inner" d="M25 15 L35 30 L25 30" fill="var(--color-accent)"/>
-                    <circle class="logo-dot" cx="25" cy="25" r="2" fill="var(--color-secondary)"/>
-                </svg>
-                <span class="logo-text">Sebastian<span class="accent"> Ramirez</span></span>
-            </a>
-            <button class="navbar__toggle" aria-label="Toggle menu" data-nav-toggle>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <div class="navbar__menu">
-                <ul class="navbar__list">
-                    <li><a href="#home" class="navbar__link active">Home</a></li>
-                    <li><a href="#projects" class="navbar__link">Projects</a></li>
-                    <li><a href="#skills" class="navbar__link">Skills</a></li>
-                    <li><a href="#education" class="navbar__link">Education</a></li>
-                    <li><a href="#contact" class="navbar__link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__wordmark" href="#top">Sebastian Ramirez <span class="mono">/ data scientist</span></a>
+      <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-menu">menu</button>
+      <ul class="nav__menu" id="nav-menu" data-nav-menu>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#toolbox">Toolbox</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn--secondary" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero__container">
-            <div class="hero__content">
-                <span class="hero__tag">Data Scientist</span>
-                <h1 class="hero__title">
-                    Let's decode the world <span class="accent">Through Data</span>
-                </h1>
-                <div class="hero__description">
-                    <p>Hey there! Welcome to my portfolio. I'm passionate about leveraging data science and machine learning to know more about how data driven solutions changes everything, and how we can use it to make better decisions.</p>
-                    <ul class="hero__specialties">
-                        <li>Development of predictive models and recommendation systems</li>
-                        <li>Exploratory data analysis and visualization</li>
-                        <li>Large-scale data analysis and process optimization</li>
-                        <li>Data pipeline automation and continuous improvement</li>
-                    </ul>
-                </div>
-                <div class="hero__cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero__visual">
-                <div class="hero__profile">
-                    <div class="profile-frame">
-                        <img src="assets/profile.webp" alt="Sebastian Ramirez - Data Scientist" class="profile-image">
-                    </div>
-                    <div class="profile-blur"></div>
-                </div>
-            </div>
+  <main id="top">
+    <!-- Hero: the page opens as a figure — a real optimizer on a real loss surface. -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <p class="eyebrow mono">data scientist · medellín, colombia</p>
+          <h1 class="hero__title">Models that show their work<span class="accent-dot">.</span></h1>
+          <p class="hero__lede">
+            I'm Sebastian — Master's in Data Science &amp; Analytics (EAFIT). I build
+            market-trend models, large-scale NLP pipelines on Spark, and LLM agents
+            that run in production — and I publish the metrics.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View projects</a>
+            <a class="btn btn--secondary" href="mailto:sebastian.ramirezesc@gmail.com">Get in touch</a>
+          </div>
         </div>
+        <figure class="hero__figure">
+          <div class="hero__canvas-wrap">
+            <canvas data-descent-canvas aria-label="Animated 3D visualization of gradient descent finding the minimum of a loss surface" role="img"></canvas>
+          </div>
+          <figcaption class="mono">fig. 1 — momentum gradient descent on a non-convex loss surface</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section__title">Featured Projects</h2>
-            <div class="projects__filters" data-filters>
-                <button class="filter-btn active" data-filter="all"><span>All</span></button>
-                <button class="filter-btn" data-filter="machine-learning"><span>Machine Learning</span></button>
-                <button class="filter-btn" data-filter="deep-learning"><span>Deep Learning</span></button>
-                <button class="filter-btn" data-filter="nlp"><span>NLP</span></button>
-                <button class="filter-btn" data-filter="big-data"><span>Big Data</span></button>
-                <button class="filter-btn" data-filter="llm"><span>Large Language Models</span></button>
-            </div>
-            <div class="projects__grid" data-projects-grid></div>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow mono">§ 1 — selected projects</p>
+          <h2>Case studies, with the numbers attached</h2>
         </div>
+        <div class="projects__grid" data-projects-grid>
+          <noscript><p>Projects require JavaScript — or browse them directly on <a href="https://github.com/sebasr0">GitHub</a>.</p></noscript>
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section__title">Technical Skills</h2>
-            <div class="skills__grid">
-                <div class="skill-card" data-animate>
-                    <h3>Machine Learning</h3>
-                    <div class="skill-progress">
-                        <div class="progress" data-progress="90"></div>
-                    </div>
-                    <ul class="skill-list">
-                        <li>Scikit-learn</li>
-                        <li>TensorFlow</li>
-                        <li>PyTorch</li>
-                        <li>XGBoost</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card" data-animate>
-                    <h3>Data Analysis</h3>
-                    <div class="skill-progress">
-                        <div class="progress" data-progress="95"></div>
-                    </div>
-                    <ul class="skill-list">
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                        <li>SQL</li>
-                        <li>Power BI</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card" data-animate>
-                    <h3>Statistics</h3>
-                    <div class="skill-progress">
-                        <div class="progress" data-progress="85"></div>
-                    </div>
-                    <ul class="skill-list">
-                        <li>Hypothesis Testing</li>
-                        <li>NonParametric Statistics</li>
-                        <li>Regression and Classification Analysis</li>
-                        <li>Time Series</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card" data-animate>
-                    <h3>Big Data</h3>
-                    <div class="skill-progress">
-                        <div class="progress" data-progress="80"></div>
-                    </div>
-                    <ul class="skill-list">
-                        <li>Spark</li>
-                        <li>Hadoop</li>
-                        <li>AWS</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-            </div>
+    <section class="section" id="toolbox">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow mono">§ 2 — toolbox</p>
+          <h2>Skills, with receipts</h2>
         </div>
+        <div class="toolbox__grid">
+          <div class="tool-group">
+            <h3>modeling</h3>
+            <ul>
+              <li>XGBoost · CatBoost</li>
+              <li>Scikit-learn</li>
+              <li>TensorFlow · PyTorch</li>
+              <li>Time-series validation</li>
+            </ul>
+            <p class="tool-group__proof mono">→ used in <a href="project.html?id=tdg-forex">forex trend prediction</a></p>
+          </div>
+          <div class="tool-group">
+            <h3>nlp &amp; big data</h3>
+            <ul>
+              <li>Spark NLP · PySpark</li>
+              <li>AWS EMR · Hadoop</li>
+              <li>Topic modeling (LDA)</li>
+              <li>MLflow tracking</li>
+            </ul>
+            <p class="tool-group__proof mono">→ used in <a href="project.html?id=bank-complaints">bank complaints NLP</a></p>
+          </div>
+          <div class="tool-group">
+            <h3>llm engineering</h3>
+            <ul>
+              <li>RAG pipelines</li>
+              <li>OpenAI · Groq / Llama</li>
+              <li>Flask · MongoDB</li>
+              <li>Telegram · WooCommerce APIs</li>
+            </ul>
+            <p class="tool-group__proof mono">→ used in <a href="project.html?id=telegram-chatbot">sales chatbot</a></p>
+          </div>
+          <div class="tool-group">
+            <h3>analysis &amp; ops</h3>
+            <ul>
+              <li>Pandas · NumPy · SQL</li>
+              <li>Hypothesis testing</li>
+              <li>Power BI</li>
+              <li>Docker · AWS</li>
+            </ul>
+            <p class="tool-group__proof mono">→ everywhere above</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section__title">Educational Background</h2>
-            <div class="education__timeline">
-
-
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023 - 2025</span>
-                        <h3>Master's Degree in Data Science and Analytics</h3>
-                        <p class="timeline-institution">EAFIT University</p>
-                        <p class="timeline-description">
-                            Completed Master Degree in Data Science and Analytics, specializing in Machine Learning, Deep Learning and Natural Language Processing.
-                        </p>
-                        <div class="timeline-achievements">
-                            <span class="achievement">GPA: 4.6/5.0</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2022</span>
-                        <h3>Data Scientist Certificate</h3>
-                        <p class="timeline-institution">Microsoft, IDATA, EAFIT University</p>
-                        <p class="timeline-description">
-                            Completed certification in Data Science and Machine Learning.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2014 - 2020</span>
-                        <h3>Bachelor's Degree in Civil Engineering</h3>
-                        <p class="timeline-institution">Universidad Cooperativa de Colombia</p>
-                        <p class="timeline-description">
-                            Completed a thesis on "Optimization of Substation cimentations".
-                        </p>
-                        <div class="timeline-achievements">
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow mono">§ 3 — education</p>
+          <h2>Background</h2>
         </div>
+        <ul class="education__list">
+          <li>
+            <span class="education__date mono">2023 — 2025</span>
+            <div>
+              <h3>M.Sc. Data Science &amp; Analytics — EAFIT University</h3>
+              <p>Machine learning, deep learning, and NLP. GPA 4.6 / 5.0. Thesis on ML models for forex trend prediction.</p>
+            </div>
+          </li>
+          <li>
+            <span class="education__date mono">2022</span>
+            <div>
+              <h3>Data Scientist Certificate — Microsoft · IDATA · EAFIT</h3>
+              <p>Certification in data science and machine learning.</p>
+            </div>
+          </li>
+          <li>
+            <span class="education__date mono">2014 — 2020</span>
+            <div>
+              <h3>B.Eng. Civil Engineering — Universidad Cooperativa de Colombia</h3>
+              <p>Thesis: optimization of substation foundations.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section__title">Let's Work Together!</h2>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/sre-0" class="social-link linkedin" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-icon">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    <span class="social-text">LinkedIn</span>
-                <!-- X (twitter) -->
-                <!-- </a>
-                <a href="https://x.com/yourusername" class="social-link x" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-icon">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                    <span class="social-text">X / Twitter</span>
-                </a> -->
-                <a href="https://github.com/sebasr0" class="social-link github" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-icon">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    <span class="social-text">GitHub</span>
-                </a>
-            </div>
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow mono">§ 4 — contact</p>
+          <h2>Let's work together</h2>
         </div>
-    </section>
-
-    <!-- Curriculum Section -->
-
-    <section id="cv" class="Curriculum">
-        <div class="container">
-            <h2 class="section__title">Download Curriculum (CV)</h2>
-            <div class="social-links">
-                <a href="assets/cv.pdf" class="social-link download" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-icon">
-                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                    </svg>
-                    <span class="social-text">Download</span>
-                </a>
+        <div class="contact__grid">
+          <div>
+            <p>
+              Open to data science and ML engineering roles, and to interesting problems
+              in between. Email is fastest — or find me on LinkedIn and GitHub.
+            </p>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="mailto:sebastian.ramirezesc@gmail.com">Email me</a>
+              <a class="btn btn--secondary" href="https://linkedin.com/in/sre-0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn btn--secondary" href="https://github.com/sebasr0" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn btn--secondary" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
             </div>
+          </div>
+          <figure class="contact__figure">
+            <img src="assets/profile.webp" alt="Sebastian Ramirez" width="440" height="440" loading="lazy">
+            <figcaption class="mono">fig. 2 — the author</figcaption>
+          </figure>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p class="footer__copyright">&copy; <span id="year">2025</span> Made With ❤️ by <a href="https://github.com/sebasr0" target="_blank" rel="noopener">Sebastian Ramirez</a></p>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <p class="mono">© <span data-year>2026</span> Sebastian Ramirez · built with vite + three.js · <a href="https://github.com/sebasr0">source</a></p>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js" type="module"></script>
-    <script src="js/animations.js" type="module"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

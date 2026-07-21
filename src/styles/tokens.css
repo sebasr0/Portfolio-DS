@@ -1,0 +1,37 @@
+/* Design tokens — "the plotting canvas".
+   One committed light look: the site reads like a well-set scientific figure. */
+:root {
+  /* Color */
+  --paper: #f7f9fa;      /* page canvas */
+  --surface: #ffffff;    /* cards, figures */
+  --grid: #dee5eb;       /* hairlines, graph-paper ruling */
+  --ink: #101c2c;        /* text */
+  --muted: #5b6b7a;      /* captions, secondary text */
+  --signal: #1d6feb;     /* links, CTAs, chart strokes */
+  --marker: #c9552e;     /* data marks only (descent trail, metric accents) */
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque', 'Instrument Sans', sans-serif;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-md: 1.02rem;
+  --text-lg: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+  --text-h2: clamp(1.7rem, 1.35rem + 1.7vw, 2.5rem);
+  --text-h1: clamp(2.5rem, 1.8rem + 3.4vw, 4.1rem);
+
+  /* Space */
+  --s1: 0.5rem;
+  --s2: 1rem;
+  --s3: 1.5rem;
+  --s4: 2.5rem;
+  --s5: 4rem;
+  --s6: 7rem;
+
+  /* Shape & motion */
+  --radius: 10px;
+  --ease: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --ruling: 34px; /* graph-paper cell size */
+}

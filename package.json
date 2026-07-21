@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-ds",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Data science portfolio for Sebastian Ramirez — Vite + Three.js, clean architecture",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}
