@@ -172,10 +172,16 @@ export class ObservatoryBackdrop {
 /** Wire a backdrop to page lifecycle: tab visibility + window resize. */
 export function mountObservatoryBackdrop(canvas, colors) {
   const backdrop = new ObservatoryBackdrop(canvas, colors);
+  const onVisibility = () => (document.hidden ? backdrop.stop() : backdrop.start());
+  const onResize = () => backdrop.resize();
   backdrop.start();
-  document.addEventListener('visibilitychange', () =>
-    document.hidden ? backdrop.stop() : backdrop.start(),
-  );
-  window.addEventListener('resize', () => backdrop.resize());
+  document.addEventListener('visibilitychange', onVisibility);
+  window.addEventListener('resize', onResize);
+  const dispose = backdrop.dispose.bind(backdrop);
+  backdrop.dispose = () => {
+    document.removeEventListener('visibilitychange', onVisibility);
+    window.removeEventListener('resize', onResize);
+    dispose();
+  };
   return backdrop;
 }
