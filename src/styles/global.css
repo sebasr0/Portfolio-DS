@@ -17,7 +17,7 @@ body {
   font-size: var(--text-md);
   line-height: 1.6;
   color: var(--ink);
-  background-color: var(--paper);
+  background-color: var(--void);
   /* Graph-paper ruling: the page itself is the plotting canvas. */
   background-image:
     linear-gradient(to right, color-mix(in srgb, var(--grid) 55%, transparent) 1px, transparent 1px),
@@ -121,7 +121,7 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  background: color-mix(in srgb, var(--void) 88%, transparent);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--grid);
 }
@@ -188,7 +188,7 @@ h3 {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: var(--paper);
+    background: var(--void);
     border-bottom: 1px solid var(--grid);
     display: none;
   }

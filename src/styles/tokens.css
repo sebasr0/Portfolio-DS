@@ -1,14 +1,13 @@
-/* Design tokens — "the plotting canvas".
-   One committed light look: the site reads like a well-set scientific figure. */
+/* Design tokens — "the observatory". One committed dark look: the plotting canvas at night. */
 :root {
-  /* Color */
-  --paper: #f7f9fa;      /* page canvas */
-  --surface: #ffffff;    /* cards, figures */
-  --grid: #dee5eb;       /* hairlines, graph-paper ruling */
-  --ink: #101c2c;        /* text */
-  --muted: #5b6b7a;      /* captions, secondary text */
-  --signal: #1d6feb;     /* links, CTAs, chart strokes */
-  --marker: #c9552e;     /* data marks only (descent trail, metric accents) */
+  /* Color — "the observatory": the plotting canvas at night */
+  --void: #0b111a;      /* page background */
+  --surface: #121a26;   /* cards, panels — always opaque */
+  --grid: #1f2b3b;      /* hairlines, graph-paper ruling */
+  --ink: #e9eff6;       /* text */
+  --muted: #93a3b5;     /* captions, secondary text */
+  --signal: #55a6ff;    /* links, CTAs, wireframe strokes */
+  --marker: #ff6b3d;    /* data marks only (descent trail, metric accents) */
 
   /* Type */
   --font-display: 'Bricolage Grotesque', 'Instrument Sans', sans-serif;

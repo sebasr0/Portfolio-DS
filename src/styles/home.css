@@ -172,7 +172,7 @@
   border: 1px solid var(--grid);
   border-radius: 4px;
   padding: 0.15rem 0.5rem;
-  background: var(--paper);
+  background: var(--void);
 }
 
 /* Toolbox ---------------------------------------------------------------- */
