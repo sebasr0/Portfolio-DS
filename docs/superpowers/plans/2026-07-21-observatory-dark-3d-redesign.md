@@ -278,7 +278,7 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 
 **Files:**
 - Create: `src/three/ObservatoryBackdrop.js`
-- Delete: `src/three/DescentScene.js`
+- (Note: the old `src/three/DescentScene.js` is deleted in Task 5 together with its last import site, so the build stays green after every task.)
 
 **Interfaces:**
 - Consumes: `loss`, `descentPath` from `src/three/lossLandscape.js`; `damp` from `src/ui/scrollProgress.js`.
@@ -472,24 +472,16 @@ export function mountObservatoryBackdrop(canvas, colors) {
 }
 ```
 
-- [ ] **Step 2: Delete the old scene**
+- [ ] **Step 2: Run unit tests and build**
+
+Run: `pnpm test && pnpm build`
+Expected: tests pass; build clean (the new file is not imported yet; `DescentScene.js` still serves the old hero until Task 5 swaps it out).
+
+- [ ] **Step 3: Commit**
 
 ```bash
-git rm src/three/DescentScene.js
-```
-
-(`src/main.js` still imports it — the build breaks until Task 5. That is expected inside this task pair; Task 5 lands before any verification gate that requires a green build. If executing with per-task review, note the red build is intentional.)
-
-- [ ] **Step 3: Run unit tests (build not required yet)**
-
-Run: `pnpm test`
-Expected: all pass (nothing imports the backdrop in tests).
-
-- [ ] **Step 4: Commit**
-
-```bash
-git add -A src/three
-git commit -m "feat: replace framed DescentScene with full-viewport ObservatoryBackdrop
+git add src/three/ObservatoryBackdrop.js
+git commit -m "feat: add full-viewport ObservatoryBackdrop scene
 
 Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ```
@@ -501,6 +493,7 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 **Files:**
 - Modify: `index.html` (backdrop canvas, hero, nav CTA)
 - Modify: `src/main.js` (wire backdrop + scrollProgress + pointer + fallback)
+- Delete: `src/three/DescentScene.js` (its last import site goes away here)
 - Modify: `src/styles/global.css` (canvas/ruling layers, section scrim, nav)
 - Modify: `src/styles/home.css` (hero overlay, scroll cue, remove figure frame styles)
 
@@ -687,10 +680,14 @@ Then add the mobile type tightening at the end of the file:
 }
 ```
 
-- [ ] **Step 5: Build and run unit tests**
+- [ ] **Step 5: Delete the old scene, build and run unit tests**
+
+```bash
+git rm src/three/DescentScene.js
+```
 
 Run: `pnpm test && pnpm build`
-Expected: tests pass; build clean (the Task-4 red build is resolved).
+Expected: tests pass; build clean; no references to `DescentScene` remain (`grep -rn DescentScene src/ index.html` → no output).
 
 - [ ] **Step 6: Browser verification (choreography + readability)**
 
@@ -703,7 +700,7 @@ With `pnpm preview --port 4174` running, in the Chrome extension:
 - [ ] **Step 7: Commit**
 
 ```bash
-git add index.html src/main.js src/styles/global.css src/styles/home.css
+git add -A index.html src/main.js src/styles/global.css src/styles/home.css src/three/DescentScene.js
 git commit -m "feat: full-page scroll-driven observatory backdrop on home page
 
 Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
