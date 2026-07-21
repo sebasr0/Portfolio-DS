@@ -214,7 +214,7 @@ h3 {
     display: block;
   }
 
-  .nav__menu {
+  .nav__menu[data-nav-menu] {
     position: absolute;
     inset: 4rem 0 auto 0;
     flex-direction: column;
@@ -225,15 +225,15 @@ h3 {
     display: none;
   }
 
-  .nav__menu.is-open {
+  .nav__menu[data-nav-menu].is-open {
     display: flex;
   }
 
-  .nav__menu li {
+  .nav__menu[data-nav-menu] li {
     border-top: 1px solid var(--grid);
   }
 
-  .nav__menu a {
+  .nav__menu[data-nav-menu] a {
     display: block;
     padding: 0.9rem 1.25rem;
   }

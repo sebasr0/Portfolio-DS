@@ -25,7 +25,7 @@ const DAMPING = 0.08;
 const GLOBAL_MIN = [1.15, 0.6]; // matches lossLandscape BASINS[0]
 
 // Camera choreography endpoints (wide establishing shot → converged close-up).
-const WIDE = { pos: new Vector3(-4.6, 3.2, 7.4), look: new Vector3(0, -0.4, 0) };
+const WIDE = { pos: new Vector3(4.6, 3.4, 7.8), look: new Vector3(0, -0.5, 0) };
 const CLOSE = {
   pos: new Vector3(3.1, 1.15, 2.9),
   look: new Vector3(GLOBAL_MIN[0], VERT * loss(...GLOBAL_MIN), GLOBAL_MIN[1]),
@@ -40,12 +40,11 @@ const smoothstep = (t) => t * t * (3 - 2 * t);
  */
 export class ObservatoryBackdrop {
   #renderer; #scene; #camera; #marker; #trail; #trailPositions; #path;
-  #frame = null; #running = false; #reduced; #canvas;
+  #frame = null; #running = false; #reduced;
   #progress = 0; #progressTarget = 0;
   #pointer = { x: 0, y: 0 }; #pointerTarget = { x: 0, y: 0 };
 
   constructor(canvas, { void: voidColor, grid, signal, marker }) {
-    this.#canvas = canvas;
     this.#reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const touch = window.matchMedia('(pointer: coarse)').matches;
 

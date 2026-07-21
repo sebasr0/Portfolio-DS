@@ -59,6 +59,8 @@
   border-radius: var(--radius);
   background: var(--surface);
   padding: var(--s2) var(--s3);
+  display: flex;
+  flex-direction: column;
 }
 
 .metrics__item dt {
