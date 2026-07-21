@@ -18,24 +18,33 @@ const homePage = makeHomePage({ getAllProjects: makeGetAllProjects(repository) }
 initChrome();
 homePage.render();
 
-// The hero scene is heavy (three.js) and non-critical: load it lazily so
-// content renders first, and skip it entirely if WebGL is unavailable.
-const canvas = document.querySelector('[data-descent-canvas]');
+// The backdrop is heavy (three.js) and decorative: load it lazily, and fall
+// back to the plain dark canvas (CSS) when WebGL or the chunk is unavailable.
+const canvas = document.querySelector('[data-backdrop]');
 if (canvas) {
-  import('./three/DescentScene.js')
-    .then(({ mountDescentScene }) => {
+  Promise.all([
+    import('./three/ObservatoryBackdrop.js'),
+    import('./ui/scrollProgress.js'),
+  ])
+    .then(([{ mountObservatoryBackdrop }, { watchScrollProgress }]) => {
       const tokens = getComputedStyle(document.documentElement);
       const color = (name) => tokens.getPropertyValue(name).trim();
-      mountDescentScene(canvas, {
-        paper: color('--surface'),
+      const backdrop = mountObservatoryBackdrop(canvas, {
+        void: color('--void'),
         grid: color('--grid'),
         ink: color('--ink'),
-        accent: color('--signal'),
+        signal: color('--signal'),
         marker: color('--marker'),
       });
+      watchScrollProgress((t) => backdrop.setProgress(t));
+      if (window.matchMedia('(pointer: fine)').matches) {
+        window.addEventListener('pointermove', (e) => {
+          backdrop.setPointer(
+            (e.clientX / window.innerWidth) * 2 - 1,
+            (e.clientY / window.innerHeight) * 2 - 1,
+          );
+        });
+      }
     })
-    .catch(() => {
-      // No WebGL / load failure: the figure frame stays, showing only the caption.
-      canvas.closest('.hero__figure')?.classList.add('hero__figure--static');
-    });
+    .catch(() => document.body.classList.add('backdrop-fallback'));
 }

@@ -29,6 +29,7 @@
   </script>
 </head>
 <body>
+  <canvas data-backdrop aria-hidden="true"></canvas>
   <header class="nav">
     <div class="container nav__inner">
       <a class="nav__wordmark" href="#top">Sebastian Ramirez <span class="mono">/ data scientist</span></a>
@@ -38,35 +39,29 @@
         <li><a href="#toolbox">Toolbox</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a class="btn btn--secondary" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a></li>
+        <li><a href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a></li>
+        <li><a class="btn btn--primary" href="mailto:sebastian.ramirezesc@gmail.com">Email me</a></li>
       </ul>
     </div>
   </header>
 
   <main id="top">
-    <!-- Hero: the page opens as a figure — a real optimizer on a real loss surface. -->
     <section class="hero">
-      <div class="container hero__grid">
-        <div>
-          <p class="eyebrow mono">data scientist · medellín, colombia</p>
-          <h1 class="hero__title">Models that show their work<span class="accent-dot">.</span></h1>
-          <p class="hero__lede">
-            I'm Sebastian — Master's in Data Science &amp; Analytics (EAFIT). I build
-            market-trend models, large-scale NLP pipelines on Spark, and LLM agents
-            that run in production — and I publish the metrics.
-          </p>
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#projects">View projects</a>
-            <a class="btn btn--secondary" href="mailto:sebastian.ramirezesc@gmail.com">Get in touch</a>
-          </div>
+      <div class="container hero__content">
+        <p class="eyebrow mono">data scientist · medellín, colombia</p>
+        <h1 class="hero__title">Models that show their work<span class="accent-dot">.</span></h1>
+        <p class="hero__lede">
+          I'm Sebastian — Master's in Data Science &amp; Analytics (EAFIT). I build
+          market-trend models, large-scale NLP pipelines on Spark, and LLM agents
+          that run in production — and I publish the metrics.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects">View projects</a>
+          <a class="btn btn--secondary" href="mailto:sebastian.ramirezesc@gmail.com">Get in touch</a>
         </div>
-        <figure class="hero__figure">
-          <div class="hero__canvas-wrap">
-            <canvas data-descent-canvas aria-label="Animated 3D visualization of gradient descent finding the minimum of a loss surface" role="img"></canvas>
-          </div>
-          <figcaption class="mono">fig. 1 — momentum gradient descent on a non-convex loss surface</figcaption>
-        </figure>
+        <p class="hero__caption mono">fig. 1 — momentum gradient descent on a non-convex loss surface</p>
       </div>
+      <p class="hero__cue mono">scroll to descend ↓</p>
     </section>
 
     <section class="section" id="projects">

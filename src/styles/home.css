@@ -2,20 +2,15 @@
 
 /* Hero ------------------------------------------------------------------- */
 .hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  position: relative;
   padding-block: var(--s5);
 }
 
-.hero__grid {
-  display: grid;
-  gap: var(--s4);
-  align-items: center;
-}
-
-@media (min-width: 900px) {
-  .hero__grid {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-    gap: var(--s5);
-  }
+.hero__content {
+  max-width: 40rem;
 }
 
 .hero__title {
@@ -41,32 +36,26 @@
   margin-top: var(--s4);
 }
 
-/* The hero *is* a figure: canvas plus mono caption, framed like a plot. */
-.hero__figure {
-  border: 1px solid var(--grid);
-  border-radius: var(--radius);
-  background: var(--surface);
-  padding: var(--s1);
-}
-
-.hero__canvas-wrap {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: calc(var(--radius) - 4px);
-}
-
-.hero__canvas-wrap canvas {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.hero__figure figcaption {
-  padding: 0.7rem 0.6rem 0.4rem;
+.hero__caption {
+  margin-top: var(--s4);
   font-size: var(--text-xs);
   color: var(--muted);
+}
+
+.hero__cue {
+  position: absolute;
+  bottom: var(--s2);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__cue {
+    display: none;
+  }
 }
 
 /* Project cards ---------------------------------------------------------- */
@@ -290,4 +279,14 @@
   padding: 0.7rem 0.6rem 0.4rem;
   font-size: var(--text-xs);
   color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: clamp(2.1rem, 11vw, 2.6rem);
+  }
+
+  .hero__lede {
+    font-size: var(--text-md);
+  }
 }
