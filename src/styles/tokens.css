@@ -1,0 +1,36 @@
+/* Design tokens — "the observatory". One committed dark look: the plotting canvas at night. */
+:root {
+  /* Color — "the observatory": the plotting canvas at night */
+  --void: #0b111a;      /* page background */
+  --surface: #121a26;   /* cards, panels — always opaque */
+  --grid: #1f2b3b;      /* hairlines, graph-paper ruling */
+  --ink: #e9eff6;       /* text */
+  --muted: #93a3b5;     /* captions, secondary text */
+  --signal: #55a6ff;    /* links, CTAs, wireframe strokes */
+  --marker: #ff6b3d;    /* data marks only (descent trail, metric accents) */
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque', 'Instrument Sans', sans-serif;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-md: 1.02rem;
+  --text-lg: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+  --text-h2: clamp(1.7rem, 1.35rem + 1.7vw, 2.5rem);
+  --text-h1: clamp(2.5rem, 1.8rem + 3.4vw, 4.1rem);
+
+  /* Space */
+  --s1: 0.5rem;
+  --s2: 1rem;
+  --s3: 1.5rem;
+  --s4: 2.5rem;
+  --s5: 4rem;
+  --s6: 7rem;
+
+  /* Shape & motion */
+  --radius: 10px;
+  --ease: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --ruling: 34px; /* graph-paper cell size */
+}
