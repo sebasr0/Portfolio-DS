@@ -62,7 +62,7 @@ palette with a rust marker reserved for data. JetBrains Mono carries every
 number and label; Bricolage Grotesque is the display face. Respects
 `prefers-reduced-motion` (static converged wide shot), pauses rendering on
 hidden tabs, caps device-pixel-ratio (2 desktop / 1.5 touch), and falls back
-to a plain dark canvas when WebGL is unavailable. Case-study pages are
+to a plain dark page (canvas hidden) when WebGL is unavailable. Case-study pages are
 3D-free by design.
 
 ## License
